@@ -1,0 +1,487 @@
+DATA->Draw("pad1:tof>>h2(400,400,400,400,400,400)","abs(tof)<1e4","col")
+DATA->Draw("pad1:pad2>>h2(1000,300,300,1000,300,300)","CUTpad1vstof && !X1flag && !X2flag && !U1flag","col")
+DATA->Draw("pad1:pad2>>h2(1000,300,300,1000,300,300)","","col")
+DATA->Draw("pad1:tof>>h2(400,400,400,400,400,400)","abs(tof)<1e4","col")
+DATA->Draw("pad1:pad2>>h2(1000,300,300,1000,300,300)","CUTpad1vstof && !X1flag && !X2flag && !U1flag","col")
+DATA->Draw("pad1:pad2>>hPad1vPad2(1000,300,300,1000,300,300)","CUTpad1vstof && !X1flag && !X2flag && !U1flag","col")
+c1->SaveAs("hPad1vPad2.png")
+c1->SaveAs("2078_hPad1vPad2.C")
+DATA->Draw("X1pos>>h2(1000,-100,500)","CUTpad1vstof && !X1flag && !X2flag && !U1flag","col")
+DATA->Draw("X1pos>>h2(1000,-1000,5000)","CUTpad1vstof && !X1flag && !X2flag && !U1flag","col")
+DATA->Draw("X1pos>>h2(1000,-100,500)","CUTpad1vstof && !X1flag && !X2flag && !U1flag","col")
+DATA->Draw("X1pos>>h2(10000,-100,800)","CUTpad1vstof && !X1flag && !X2flag && !U1flag","col")
+DATA->Print
+DATA->Print()
+DATA->Draw("SiliconPhi")
+DATA->Draw("SiliconPhi","CUTpad1vstof","col")
+DATA->Draw("SiliconPhi","CUTpad1vstof && !X1flag && !X2flag && !U1flag","col")
+DATA->Draw("SiliconPhi","CUTpad1vstof","col")
+DATA->Draw("SiliconPhi","CUTpad1vstof && !X1flag && !X2flag && !U1flag","col")
+DATA->Draw("SiliconPhi:SiliconTheta","CUTpad1vstof && !X1flag && !X2flag && !U1flag","col")
+DATA->Draw("SiliconPhi:SiliconTheta>>h2(400,400,400,400,400,400)","CUTpad1vstof && !X1flag && !X2flag && !U1flag","col")
+TFile *_file0 = TFile::Open("sorted02078.root")
+DATA->Draw("pad1:tof","abs(tof)<1e4","col")
+DATA->Draw("pad1:tof>>h2(400,400,400,400,400,400)","abs(tof)<1e4","col")
+DATA->Draw("SiliconEnergy")
+DATA->Draw("SiliconEnergy","CUTpad1vstof && !X1flag && !X2flag && !U1flag")
+DATA->Draw("SiliconEnergy")
+DATA->Draw("SiliconEnergy","CUTpad1vstof && !X1flag && !X2flag && !U1flag")
+DATA->Draw("SiliconTheta","CUTpad1vstof && !X1flag && !X2flag && !U1flag")
+DATA->Draw("SiliconTheta")
+DATA->Draw("SiliconPhi")
+DATA->Draw("SiliconPhi:SiliconTheta")
+DATA->Draw("SiliconTheta:SiliconEnergy","CUTpad1vstof && !X1flag && !X2flag && !U1flag)
+@
+DATA->Draw("SiliconTheta:SiliconEnergy","CUTpad1vstof && !X1flag && !X2flag && !U1flag")
+DATA->Draw("SiliconPhi:SiliconEnergy","CUTpad1vstof && !X1flag && !X2flag && !U1flag")
+DATA->Draw("SiliconEnergy:SiliconTheta","CUTpad1vstof && !X1flag && !X2flag && !U1flag")
+DATA->Draw("SiliconPhi:SiliconEnergy","CUTpad1vstof && !X1flag && !X2flag && !U1flag")
+DATA->Draw("SiliconEnergy:SiliconTheta","CUTpad1vstof && !X1flag && !X2flag && !U1flag")
+.q
+.x curves.c
+TGraph *g = new TGraph()
+g->SetPoint(0,1,50)
+g->SetPoint(1,2,100)
+g->Draw("*AL")
+g->SetPoint(0,1,0.406)
+g->SetPoint(1,2.01,0.487)
+g->SetPoint(2,5.00,0.721)
+g->SetPoint(3,10.01,0.860)
+g->SetPoint()
+g->SetPoint(4,15.01,0.951)
+g->SetPoint(5,20.00,1.018)
+g->SetPoint(6,25.03,1.067)
+g->SetPoint(7,30.00,1.106)
+g->SetPoint(8,35.10,1.141)
+g->SetPoint()
+g->SetPoint(9,40.01,1.172)
+g->SetPoint(10,45.01,1.202)
+g->SetPoint(11,55,1.264)
+g->SetPoint(12,64.98,1.322)
+g->SetPoint(13,75,1.379)
+g->SetPoint(14,85.01,1.436)
+g->SetColor(2)
+g->SetColor(1)
+*g = new TGraph()
+.q
+TGraph *grafiek = new TGraph()
+grafiek->SetPoint()
+grafiek->SetPoint(0,1,0.254)
+grafiek->Draw("*Al")
+grafiek->SetPoint(1,2,0.309)
+grafiek->SetPoint()
+grafiek->SetPoint(2,3.01,0.352)
+grafiek->SetPoint(3,5,0.416)
+grafiek->SetPoint(4,7.02,0.468)
+grafiek->SetPoint(5,10,0.526)
+grafiek->SetPoint(6,15.02,0.599)
+grafiek->SetPoint()
+grafiek->SetPoint(7,20,0.649)
+grafiek->SetPoint(8,25,0.68)
+grafiek->SetPoint(9,30.01,0.706)
+grafiek->SetPoint(10,40,0.744)
+grafiek->SetPoint(11,50,0.775)
+grafiek->SetPoint(12,60,0.805)
+grafiek->SetPoint()
+grafiek->SetPoint(13,70,0.833)
+grafiek->SetPoint(14,80.02,0.861)
+.q
+TGraph *g = new TGraph()
+g->SetPoint()
+g->SetPoint(0,1.01,0.242)
+g->SetPoint(1,2,0.294)
+g->SetPoint(2,5.02,0.404)
+g->SetPoint(3,10.01,0.521)
+g->Draw("*AL")
+g->SetPoint()
+g->SetPoint(4,15,0.608)
+.x curves.c
+.x curves.c
+.x curves.c
+.x curves.c
+.x curves.c
+c1->SaveAs("D3_Si_leakages.png")
+c1->SaveAs("D3_Si_leakages.C")
+.q
+.x D4_Si_Leakage.C
+c1->SaveAs("D4_Si_leakages.png")
+.q
+.x D5 Si leakage.C
+.q
+.x D1 Si Leakage.C
+.x D1 Si Leakage.C
+.x D2 Si Leakage.C
+.x D5 Si Leakage.C
+.x D5 Si leakage.C
+c1->SaveAs("D5_Si_Leakage.png")
+.q
+.x D1 Si Leakage.C
+c1->SaveAs("D1test.C")
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.q
+.x D1 Si Leakage.C
+.x D1 Si Leakage.C
+.x D1 Si Leakage.C
+.x D1 Si Leakage.C
+.x D1 Si Leakage.C
+.x D1 Si Leakage.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x
+.q
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x graph_possibilities.C 
+.q
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+c1->SaveAs("test.C");
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.x D1test.C
+.q
+.x curves.c~
+.q
+TFile *_file0 = TFile::Open("sorted02078.root")
+DATA->Draw("X1pos");
+DATA->Draw("X1pos:ThSCAT");
+DATA->Draw("pad1:tof>>h2(400,400,400,400,400,400)","abs(tof)<1e4","col");
+DATA->Draw("ThSCAT:X1pos>>hThSCATvX1pos(1000,0,800,1000,-3,3)","CUTpad1vstof && !X1flag && !X2flag && !U1flag","col")
+c1->SaveAs("ThSCAT_v_X1pos.png");
+c1->SaveAs("ThSCAT_v_X1pos.C");
+TGraph *g = new TGraph()
+g->SetPoint(0,403.578,-1.62942)
+g->SetPoint(1,417.363,0.876278);
+g->Draw("*AL")
+g->Fit("pol1");
+g->SetPoint(0,-1.62942,403.578)
+g->SetPoint(1,0.876278,417.363);
+g->Fit("pol1");
+DATA->Draw("ThSCAT:X1pos-5.50146*ThSCAT>>hThSCATvX1pos(1000,0,800,1000,-3,3)","CUTpad1vstof && !X1flag && !X2flag && !U1flag","col")
+c1->SaveAs("ThSCAT_v_X1pos_corrected.png");
+c1->SaveAs("ThSCAT_v_X1pos_corrected.C");
+.x ThSCAT_v_X1pos_corrected.C
+.x ThSCAT_v_X1pos_corrected.C
+.x ThSCAT_v_X1pos_corrected.C
+.q
+DATA->Print()
+DATA->Draw("TDCChannels");
+TFile *_file0 = TFile::Open("sorted02078.root")
+DATA->Draw("StripFront");
+DATA->Draw("StripBack");
+DATA->Draw("StripBack:StripFront");
+DATA->Draw("StripFront");
+DATA->Draw("StripBack");
+DATA->Draw("EnergyBack");
+DATA->Draw("EnergyFront");
+DATA->Draw("EnergyBack");
+DATA->Draw("pad1:tof>>h2(400,400,400,400,400,400)","abs(tof)<1e4","col");
+DATA->Draw("EnergyFront");
+DATA->Draw("EnergyFront:EnergyBack");
+DATA->Draw("EnergyFront:EnergyBack","","col");
+DATA->Draw("EnergyFront:EnergyBack","CUTpad1vstof && !X1flag && !X2flag && !U1flag","col");
+DATA->Draw("EnergyFront:EnergyBack","CUTpad1vstof && !X1flag && !X2flag && !U1flag","col");
+DATA->Draw("EnergyFront:EnergyBack>>hFrontvBack(5000,0,10000,5000,0,10000)","CUTpad1vstof && !X1flag && !X2flag && !U1flag","col");
+DATA->Draw("EnergyFront:EnergyBack>>hFrontvBack(1000,0,8000,1000,0,8000)","CUTpad1vstof && !X1flag && !X2flag && !U1flag","col");
+DATA->Draw("EnergyFront:EnergyBack","CUTpad1vstof && !X1flag && !X2flag && !U1flag","col");
+DATA->Draw("EnergyFront:EnergyBack","","col");
+DATA->Draw("EnergyFront:EnergyBack","CUTpad1vstof && !X1flag && !X2flag && !U1flag","col");
+c1->SaveAs("EnergyFront_v_EnergyBack.png");
+c1->SaveAs("EnergyFront_v_EnergyBack.C");
+DATA->Draw("X1pos");
+.q
+TFile *_file0 = TFile::Open("sorted02078.root")
+DATA->Draw("X1pos");
+DATA->Draw("X1pos>>h2(10000,0,1000)");
+DATA->Draw("X1pos>>h2(10000,-1000,1000)");
+DATA->Draw("X1pos>>h2(10000,-200,1000)");
+DATA->Draw("X1pos>>h2(10000,-100,1000)");
+DATA->Draw("X1pos>>h2(10000,0,1000)");
+DATA->Draw("ADC2DModule_000","col");
+DATA->Draw("ADC2DModule_000");
+DATA->Print()
+DATA->Draw("ADCValues_000");
+DATA->Draw("ADCValues");
+DATA->Draw("DetectorHit");
+.q
+.x D1 Si Leakage.C
+c1->SaveAs("D1_Si_Leakage.png");
+.q
+.q
+.q
+TFile *_file0 = TFile::Open("output.root")
+DATA->Draw("X1pos");
+.q
+TFile *_file0 = TFile::Open("sorted02078.root")
+DATA->Draw("ThFPx");
+DATA->Draw("ThFPx:X1pos");
+DATA->Draw("ThFPx:X1pos","col");
+DATA->Draw("ThFPx:X1pos","","col");
+DATA->Draw("Y1:X1pos","","col");
+DATA->Draw("Y1");
+DATA->Draw("Y1>>h2(10000,-2540,2000)");
+DATA->Draw("Y1>>h2(10000,-25,35)");
+TFile *_file0 = TFile::Open("output.root")
+DATA->Print();
+DATA->Draw("ADCValues[0]");
+DATA->Draw("ADCValues[0]","");
+DATA->Draw("X1pos")
+TBrowser t
+DATA->Draw("ADC2DModule_000")
+DATA->Draw("ADC2DModule[0]")
+.q
+TFile *_file0 = TFile::Open("sorted00063.root")
+DATA->Draw
+DATA->Draw("TDCChannels")
+.! ls
+DATA->Draw("TDCValues")
+DATA->Draw("TDCValues[0]")
+.q
+TFile *_file0 = TFile::Open("output.root")
+DATA->Draw("X1pos");
+.q
+TFile *_file0 = TFile::Open("sorted01040.root")
+DATA->Draw("X1pos");
+DATA->Draw("X1pos>>hX1pos(10000,0,1000)");
+DATA->Draw("X1pos");
+.q
+TFile *_file0 = TFile::Open("sorted01040.root")
+.q
+TFile *_file0 = TFile::Open("sorted01040.root")
+DATA-
+>DATA->Draw("X1pos");
+DATA->Draw("X1pos");
+DATA->Draw("ThSCAT:X1pos");
+DATA->Draw("thetaSCAT:X1pos");
+DATA->Draw("thetaSCAT:X1pos>>h(2000,0,800,2000,-10,10)");
+DATA->Draw("pad1:tof>>h2(2000,0,4000,2000,500,2000)","abs(tof)<1e4","col");
+DATA->Draw("pad1:tof>>h2(4000,0,4000,2000,500,4000)","abs(tof)<1e4","col");
+DATA->Draw("pad1:tof>>h2(4000,2700,3700,2000,500,2500)","abs(tof)<1e4","col");
+DATA->Draw("pad1:tof>>h2(4000,3400,3650,2000,700,2100)","abs(tof)<1e4","col");
+DATA->Draw("pad1:tof>>h2(4000,3400,3650,2000,700,2100)","","col");
+DATA->Draw("pad1:tof>>h2(1000,3400,3650,1000,700,2100)","","col");
+.q
+TFile *_file0 = TFile::Open("sorted01040.root")
+DATA->Draw("pad1:tof>>h2(1000,3400,3650,1000,700,2100)","","col");
+DATA->Draw("thetaSCAT:X1pos>>h(2000,0,800,2000,-10,10)","CUTpad1vstofRun1040 && !X1flag && !X2flag && !U1flag","col");
+DATA->Draw("thetaSCAT:X1pos>>h(2000,0,800,2000,-10,10)","CUTpad1vstofRun1040","col");
+DATA->Draw("thetaSCAT:X1pos>>h(2000,0,800,2000,-10,10)","CUTpad1vstofRun1040 && !X1flag && !X2flag && !U1flag","col");
+DATA->Draw("thetaSCAT:X1pos>>h(2000,0,800,2000,-10,10)","CUTpad1vstofRun1040","col");
+.q
+TFile *_file0 = TFile::Open("sorted01040.root")
+.x CUTpad1vstofRun1040.C 
+DATA->Draw("thetaSCAT:X1pos>>h(2000,0,800,2000,-10,10)","CUTpad1vstofRun1040","col");
+.q
+TFile *_file0 = TFile::Open("sorted01040.root")
+DATA->Draw("thetaSCAT:X1pos>>h(2000,0,800,2000,-10,10)","CUTpad1vstofRun1040","col");
+DATA->Draw("thetaSCAT:X1pos>>h(2000,0,800,2000,-10,10)","","col");
+.x CUTpad1vstofRun1040.C 
+DATA->Draw("thetaSCAT:X1pos>>h(2000,0,800,2000,-10,10)","CUTpad1vstofRun1040","col");
+DATA->Draw("thetaSCAT:X1pos>>h(2000,0,800,2000,-10,10)","CUTpad1vstofRun1040 && !X1flag && !X2flag && !U1flag","col");
+TGraph *g = new TGraph()
+g->SetPoint(0,492.732,-1.28535);
+g->SetPoint(1,475.815,-6.81234);
+g->Draw("*AL");
+g->Fit("pol1");
+DATA->Draw("thetaSCAT:X1pos-0.326712*thetaSCAT>>h(2000,0,800,2000,-10,10)","CUTpad1vstofRun1040 && !X1flag && !X2flag && !U1flag","col");
+g->SetPoint(0,-1.28535,492.732);
+g->SetPoint(1,-6.81234,475.815);
+g->Draw("*AL");
+g->Fit("pol1");
+DATA->Draw("thetaSCAT:X1pos-3.0608*thetaSCAT>>h(2000,0,800,2000,-10,10)","CUTpad1vstofRun1040 && !X1flag && !X2flag && !U1flag","col");
+DATA->Draw("thetaSCAT:X1pos>>h(2000,0,800,2000,-10,10)","CUTpad1vstofRun1040 && !X1flag && !X2flag && !U1flag","col");
+g->SetPoint(0,-1.31748,493.545);
+g->SetPoint(1,-2.8599,487.353);
+g->SetPoint(2,-4.53085,482.19);
+g->SetPoint(3,-5.75193,479.039);
+g->SetPoint(4,-6.94087,475.754);
+g->Draw("AL*");
+g->Fit("pol2");
+DATA->Draw("thetaSCAT:X1pos-4.44632*thetaSCAT-0.161252*thetaSCAT*thetaSCAT>>h(2000,0,800,2000,-10,10)","CUTpad1vstofRun1040 && !X1flag && !X2flag && !U1flag","col");
+DATA->Draw("thetaSCAT:X1pos-4.44632*thetaSCAT-0.161252*thetaSCAT*thetaSCAT>>hThSCATvX1pos(2000,0,800,2000,-10,10)","CUTpad1vstofRun1040 && !X1flag && !X2flag && !U1flag","col");
+.!clear
+.! clear
+c1->SaveAs("thetaSCATvX1posRun1040.C");
+c1->SaveAs("thetaSCATvX1posRun1040.png");
+DATA->Draw("thetaSCAT:X1pos-4.44632*thetaSCAT-0.161252*thetaSCAT*thetaSCAT>>hThSCATvX1pos(2000,0,800,2000,-10,10)","CUTpad1vstofRun1040 && !X1flag && !X2flag && !U1flag");
+c1->SaveAs("thetaSCATvX1posRun1040.C");
+c1->SaveAs("thetaSCATvX1posRun1040.png");
+.! eog thetaSCATvX1posRun1040.png &
+.! clear
+.! eog thetaSCATvX1posRun1040.png &
+DATA->Draw("thetaSCAT:X1pos-4.44632*thetaSCAT-0.161252*thetaSCAT*thetaSCAT>>hThSCATvX1pos(2000,0,800,2000,-10,10)","CUTpad1vstofRun1040 && !X1flag && !X2flag && !U1flag");
+DATA->Draw("hThSCATvX1pos");
+hThSCATvX1pos->Draw("AL*");
+.w
+.q
+TFile *_file0 = TFile::Open("sorted01040.root")
+hThSCATvX1pos->Draw("AL*");
+TBrowser t
+TFile *_file0 = TFile::Open("analysis/sorted01040.root")
+TBrowser t
+.! clear
+hPad1Pad2->Draw("col");
+hPad1Pad2G->Draw("col");
+hPad1Pad2G->Draw("col");
+DATA->Draw("pad1:pad2");
+DATA->Draw("pad1:pad2","col");
+DATA->Draw("pad1:pad2","","col");
+DATA->Draw("pad1:pad2>>h2D(999,1,3997,1000,0,4000)","","col");
+DATA->Draw("pad1:pad2>>h2D(999,1,3997,1000,0,4000)","tof > 5070","col");
+DATA->Draw("pad1:tof>>h(100,0,4000,100,0,10000)","","col:);
+@
+DATA->Draw("pad1:tof>>h(100,0,4000,100,0,10000)","","col");
+.! emacs histos.C &
+.! mv histos.C analysis/
+.! ;s
+.! ls
+.! ls analysis/
+.! cd analysis/
+ls
+0
+.! clear
+.! ls
+.! cd analysis
+.! ls
+.! cd analysis/
+.! ls
+.x analysis/histos.C 
+.x analysis/histos.C 
+.x analysis/histos.C 
+DATA->Draw("pad1:tof>>hpad1vstof","","col");
+.! cd analysis?
+.! cd analysis/
+.! ls
+.! analysis 
+.! cd analysis 
+.! ls
+.! emacs analysis/histos.C &
+hPad1VsTofG->Draw("col");
+hPad1VsTofG->Draw("AL*");
+DATA->Draw("pad1:tof>>h(100,0,4000,100,0,10000)","","col");
+.x analysis/histos.C
+DATA->Draw("pad1:tof>>hpad1vstof","","col");
+DATA->Draw("pad2:tof>>hpad2vstof","","col");
+.! ;
+.! ls
+.! ls analysis/
+DATA->Draw("pad1:tof>>hpad1vstof","","col");
+.x analysis/create_gate_pad1tof.C 
+.x analysis/create_gate_pad1tof.C 
+DATA->Draw("pad1:tof>>htemp(2000,3200,3700,2000,700,1900)","abs(tof)<1e4","col");
+TFile *_file0 = TFile::Open("sorted03025.root")
+DATA->Draw("X1pos");
+DATA->Draw("pad1:tof>>hPad1vTOF(2000,3200,3600,2000,700,2000)","abs(tof)<1e4",""col");
+@
+DATA->Draw("pad1:tof>>hPad1vTOF(2000,3200,3600,2000,700,2000)","abs(tof)<1e4","col");
+DATA->Draw("thetaSCAT:X1pos>>hThSCATvX1pos(1000,0,800,1000,-6,2)","CUTpad1vtofRun3025 && !X1flag && !X2flag && !U1flag","col");
+DATA->Draw("thetaSCAT:X1pos>>hThSCATvX1pos(1000,-100,800,1000,-10,2)","CUTpad1vtofRun3025 && !X1flag && !X2flag && !U1flag","col");
+TGraph *g = new TGraph();
+g->SetPoint(0,-0.93038,530.398)
+g->SetPoint(1,-2.25949,525.791)
+g->SetPoint(2,-4.15823,518.76)
+g->SetPoint(3,-5.51899,514.395)
+g->SetPoint(4,-7.38608,510.516)
+g->Draw("AL*");
+g->Fit("pol2");
+DATA->Draw("thetaSCAT:X1pos-4.54802*thetaSCAT-0.168492*thetaSCAT*thetaSCAT","CUTpad1vtofRun3025.C && !X1flag && !X@flag && !U1flag","col");
+DATA->Draw("thetaSCAT:X1pos-4.54802*thetaSCAT-0.168492*thetaSCAT*thetaSCAT","CUTpad1vtofRun3025 && !X1flag && !X@flag && !U1flag","col");
+DATA->Draw("thetaSCAT:X1pos-4.54802*thetaSCAT-0.168492*thetaSCAT*thetaSCAT","CUTpad1vtofRun3025 && !X1flag && !X2flag && !U1flag","col");
+g->Draw("AL*");
+DATA->Draw("thetaSCAT:X1pos-4.54802*thetaSCAT-0.168492*thetaSCAT*thetaSCAT","CUTpad1vtofRun3025 && !X1flag && !X2flag && !U1flag","col");
+.x chainer.cpp &
+.! ls
+.x chainer.cpp &
+.x chainer.cpp
+.x CUTpad1vtofRun3025.C 
+.x chainer.cpp 
+.x chainer.cpp 
+.x chainer.cpp 
+@
+.x chainer.cpp 
+DATA->Draw("thetaSCAT:X1pos-4.54802*thetaSCAT-0.168492*thetaSCAT*thetaSCAT","CUTpad1vtofRun3025 && !X1flag && !X2flag && !U1flag","col");
+DATA->Draw("X1pos-4.54802*thetaSCAT-0.168492*thetaSCAT*thetaSCAT:Entry$","CUTpad1vtofRun3025 && !X1flag && !X2flag && !U1flag","col");
